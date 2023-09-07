@@ -10,7 +10,7 @@ permissions:
 jobs:
         #   get-test:
         #     name: get-test 
-        #     runs-on: ubuntu-latest
+        #     runs-on: ubuntu-20.04
         #     steps:
         #       - uses: actions/checkout@v3
         #         with:
@@ -23,7 +23,7 @@ jobs:
 
   set-up-test:
     name: set-up-test
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v3
       - name: cache-depend-check
@@ -71,7 +71,7 @@ jobs:
       - name: do-testing  
         uses: education/autograding@v1 
       #  set-up-xv6:
-      #    runs-on: ubuntu-latest
+      #    runs-on: ubuntu-20.04
       #    steps:
       #    - uses: actions/checkout@v3
       #    - name: script
@@ -83,7 +83,7 @@ jobs:
         #  set-up-python:
         #    name: set-up-python 
         #    needs: get-test
-        #    runs-on: ubuntu-latest
+        #    runs-on: ubuntu-20.04
         #    steps:
         #      - uses: actions/checkout@v3
         #      - uses: actions/setup-python@v4
@@ -95,7 +95,7 @@ jobs:
         #  test:
         #    needs: [set-up-python,set-up-xv6]
         #    name: Autograding
-        #    runs-on: ubuntu-latest
+        #    runs-on: ubuntu-20.04
         #    steps:
         #      - uses: actions/checkout@v3
         #      - uses: actions/download-artifact@v2
